@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Rock, Paper, Scissors</h1>
+        
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <p>Wins: <span id="wins">0</span></p>
+            <p>Losses: <span id="losses">0</span></p>
+            <p>Ties: <span id="ties">0</span></p>
+        </div>
+
+        <!-- Display Choices with Circles -->
+        <div class="game-result">
+            <h2 id="result">Choose your weapon!</h2>
+            <div class="weapon-used-container">
+                <div class="userChoice" id="userChoice">
+                    <img src="./assets/images/icon-user.png" alt="user" class="choice--img">
+                </div>
+                <h3>VS</h3>
+                <div class="computerChoice" id="computerChoice">
+                    <img src="./assets/images/icon-computer.png" alt="computer" class="choice--img">
+                </div>
+            </div>
+        </div>
+
+        <!-- User's Choice -->
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="./assets/images/icon-rock.png" alt="Rock" class="choice--img">
+            </div>
+            <div class="choice" id="paper">
+                <img src="./assets/images/icon-paper.png" alt="Paper" class="choice--img">
+            </div>
+            <div class="choice" id="scissors">
+                <img src="./assets/images/icon-scissors.png" alt="Scissors" class="choice--img">
+            </div>
+        </div>
+
+        <!-- Start Button -->
+        <button id="startButton" disabled>Start Game</button>
+        <button id="resetButton">Reset Game</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
