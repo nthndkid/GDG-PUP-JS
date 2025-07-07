@@ -3,6 +3,8 @@
  - Create two global variables (e.g., globalVar, anotherGlobalVar).
  - Assign any values you like.
 ********************/
+var globalVar = 123;
+var anotherGlobalVar = "Global";
 
 
 /********************
@@ -13,13 +15,23 @@
    2. Log both the global variable(s) and the local variable to the console.
    3. Return a string that includes both the global and local variables.
 ********************/
+function demoFunctionScope(){
+  let demoVar = "Local";
 
+  console.log(demoVar);
+  console.log(globalVar);
+  console.log(anotherGlobalVar);
+
+
+  return `Global Variable: ${globalVar} and ${anotherGlobalVar}. Local Variable: ${demoVar}`;
+}
 
 /********************
  Step 3: Call the Function and Log Its Return Value
  - Call your function from Step 2 and store its result in a variable.
  - Use console.log() to display the return value in the console.
 ********************/
+console.log(demoFunctionScope());
 
 
 /********************
@@ -30,3 +42,10 @@
    2. Log the block-scoped variable within the block.
  - Try logging the same variable outside the block and observe what happens.
 ********************/
+
+if (true){
+  let blockVar =  "Block Var";
+  console.log("Inside: " + blockVar);
+}
+
+console.log("Outside: " + blockVar);
